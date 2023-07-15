@@ -6,8 +6,8 @@ offline_threshold = 30
 
 # 管理员账号,不设置默认随机生成，用于查看 /detail, /map
 jwt_secret = "" # 修改这个, 使用 openssl rand -base64 16 生成 secret
-admin_user = ""
-admin_pass = ""
+admin_user = "gd772"
+admin_pass = "jelly789"
 
 # hosts 跟 hosts_group 两种配置模式任挑一种配置即可
 # name 主机唯一标识，不可重复，alias 为展示名
@@ -20,10 +20,11 @@ admin_pass = ""
 # os 标签可选，不填则使用上报数据，ndd(next due date) 下次续费时间, spec 为主机规格
 # os 可用值 centos debian ubuntu alpine pi arch windows linux macos android
 hosts = [
-  {name = "h1", password = "p1", alias = "n1", location = "🏠", type = "kvm", labels = "os=arch;ndd=2022/11/25;spec=2C/4G/60G;"},
-  {name = "h2", password = "p2", alias = "n2", location = "🏢", type = "kvm", disabled = false},
-  {name = "h3", password = "p3", alias = "n3", location = "🏡", type = "kvm", monthstart = 1},
-  {name = "h4", password = "p4", alias = "n4", location = "cn", type = "kvm", notify = true, labels = "ndd=2022/11/25;spec=2C/4G/60G;"},
+  {name = "h1", password = "p1", alias = "CloudCone 洛杉矶 年付 22.22刀", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2024/07/12;spec=2C/2G/80G/3T 月流量;"},
+  {name = "h2", password = "p2", alias = "BuyVM 卢森堡 季付 10.5刀", location = "lu", type = "kvm", monthstart = 1, labels = "os=debian;ndd=2023/10/07;spec=1C/1G/10G+2T存储块 无限流量;"},
+  {name = "h3", password = "p3", alias = "KURUN Cloud 洛杉矶 月付 3刀 AS9929", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/08/03;spec=1C/1G/10G 1T/月流量;"},
+  {name = "h4", password = "p4", alias = "OVHCloud 美区 加拿大 独服 月付 19刀", location = "ca", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/08/03;spec=4C/32G/3x2T 无限流量;"},
+  {name = "h5", password = "p5", alias = "HostHatch 东京 季付 45刀", location = "jp", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/10/01;spec=4C/16G/70G 2.5T/月流量;"},
 
   # 最小化配置
   {name = "mac", password = "pp", alias = "macos"},
