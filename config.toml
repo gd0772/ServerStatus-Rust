@@ -6,8 +6,8 @@ offline_threshold = 30
 
 # 管理员账号,不设置默认随机生成，用于查看 /detail, /map
 jwt_secret = "" # 修改这个, 使用 openssl rand -base64 16 生成 secret
-admin_user = "这里修改为你的用户名"
-admin_pass = "你这里修改为的密码"
+admin_user = "改为你的登录名称"
+admin_pass = "改为你的登录密码"
 
 # hosts 跟 hosts_group 两种配置模式任挑一种配置即可
 # name 主机唯一标识，不可重复，alias 为展示名
@@ -20,11 +20,29 @@ admin_pass = "你这里修改为的密码"
 # os 标签可选，不填则使用上报数据，ndd(next due date) 下次续费时间, spec 为主机规格
 # os 可用值 centos debian ubuntu alpine pi arch windows linux macos android
 hosts = [
-  {name = "h1", password = "p1", alias = "CloudCone 洛杉矶 年付 22.22刀", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2024/07/12;spec=2C/2G/80G/3T 月流量;"},
-  {name = "h2", password = "p2", alias = "BuyVM 卢森堡 季付 10.5刀", location = "lu", type = "kvm", monthstart = 1, labels = "os=debian;ndd=2023/10/07;spec=1C/1G/10G+2T存储块 无限流量;"},
-  {name = "h3", password = "p3", alias = "KURUN Cloud 洛杉矶 月付 3刀 AS9929", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/08/03;spec=1C/1G/10G 1T/月流量;"},
-  {name = "h4", password = "p4", alias = "OVHCloud 美区 加拿大 独服 月付 19刀", location = "ca", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/08/03;spec=4C/32G/3x2T 无限流量;"},
-  {name = "h5", password = "p5", alias = "HostHatch 东京 季付 45刀", location = "jp", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/10/01;spec=4C/16G/70G 2.5T/月流量;"},
+  {name = "h1", password = "p1", alias = "TongJi edu Azure 教育 100刀", location = "jp", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/12/27;spec=1C/1G/62G/B1s;"},
+  {name = "h2", password = "p2", alias = "Gz edu Azure 教育 100刀", location = "hk", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2024/02/06;spec=1C/1G/62G/B1s;"},
+  {name = "h8", password = "p8", alias = "CloudCone 洛杉矶 年付 22.22刀", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2024/07/12;spec=2C/2G/80G/3T 月流量;"},
+  {name = "h9", password = "p9", alias = "Vultr 免费机 迈阿密", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2024/03/19;spec=1C/512MB/10G/无限流量;"},
+  {name = "h10", password = "p10", alias = "VMISS 大阪 IIJ 年付", location = "jp", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2024/01/26;spec=1C/1G/15G/1T 月流量;"},
+  {name = "h11", password = "p11", alias = "VMISS 香港 BGP 年付", location = "hk", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2024/01/25/12;spec=1C/1G/15G/600G 月流量;"},
+  {name = "h13", password = "p13", alias = "GreenCloud 香港 年付 45刀", location = "hk", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/11/24;spec=4C/8G/60G/1.5T 月流量;"},
+  {name = "h14", password = "p14", alias = "GreenCloud 新加坡 年付 25刀", location = "sg", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2024/01/19;spec=2C/4G/35G/750G 月流量;"},
+  {name = "h15", password = "p15", alias = "DediPath 洛杉矶 年付 14刀", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/12/26;spec=1C/1G/20G/325.2T 年流量;"},
+  {name = "h16", password = "p16", alias = "OVHCloud 美区 俄勒冈 VPS 季付 12刀", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/10/11;spec=1C/2G/20G/1T 月流量;"},
+  {name = "h17", password = "p17", alias = "OVHCloud 美区 加拿大 独服 月付 19刀", location = "ca", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/08/03;spec=4C/32G/3x2T 无限流量;"},
+  {name = "h18", password = "p18", alias = "BuyVM 卢森堡 季付 10.5刀", location = "lu", type = "kvm", monthstart = 1, labels = "os=debian;ndd=2023/10/07;spec=1C/1G/10G+2T存储块 无限流量;"},
+  {name = "h19", password = "p19", alias = "HostHatch 东京 季付 45刀", location = "jp", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/10/01;spec=4C/16G/70G 2.5T/月流量;"},
+  {name = "h20", password = "p20", alias = "Webdock 加拿大 活动机", location = "ca", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/09/21;spec=2C/2G/225G/1T 月流量;"},
+  {name = "h21", password = "p21", alias = "1FIRE 法兰克福 季付 11.97欧", location = "de", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/09/07;spec=2C/2G/25G/无限流量;"},
+  {name = "h22", password = "p22", alias = "GBcloud 马来西亚 赛城 月付 4刀", location = "my", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/09/21;spec=1C/512MB/25G/1T 月流量;"},
+  {name = "h27", password = "p27", alias = "aws 免费EC2 弗吉尼亚", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/09/02;spec=1C/1G/8G/100G 月流量/32v/TW;"},
+  {name = "h28", password = "p28", alias = "aws Lightsail 东京 月付 5刀", location = "jp", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/09/02;spec=1C/1G/40G/2T 月流量/32v/TW;"},
+  {name = "h29", password = "p29", alias = "aws 免费EC2 悉尼", location = "au", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/09/2;spec=1C/1G/8G/100G 月流量/8v/MY;"},
+  {name = "h30", password = "p30", alias = "aws Lightsail 新加坡 月付 5刀", location = "sg", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/09/02;spec=1C/1G/40G/2T 月流量/8v/MY;"},
+  {name = "h31", password = "p31", alias = "aws Lightsail 俄勒冈 月付 3刀", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/09/02;spec=1C/512MB/20G/1T 月流量/1v/US;"},
+  {name = "h32", password = "p32", alias = "GigsGigsCloud 东京软银 月付 9.8刀", location = "jp", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/07/27;spec=1C/1B/10G/500G 月流量;"},
+  {name = "h99", password = "p99", alias = "KURUN Cloud 洛杉矶 月付 3刀 AS9929", location = "us", type = "kvm",monthstart = 1, labels = "os=debian;ndd=2023/08/03;spec=1C/1G/10G 1T/月流量;"},
 
   # 最小化配置
   {name = "mac", password = "pp", alias = "macos"},
